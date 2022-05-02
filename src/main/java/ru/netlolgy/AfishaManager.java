@@ -6,8 +6,7 @@ import lombok.Data;
 public class AfishaManager {
     private int amountFilms = 10;
     private FilmData[] films = new FilmData[0];
-    private FilmData[] filmsReturn = new FilmData[0];
-
+    
     public FilmData[] getFilms() {
         return films;
     }
@@ -16,9 +15,6 @@ public class AfishaManager {
         this.films = films;
     }
 
-    public FilmData[] getFilmsReturn() {
-        return filmsReturn;
-    }
 
 
     public AfishaManager() {
@@ -55,7 +51,7 @@ public class AfishaManager {
             int index = films.length - i - 1;
             tmp[i] = films[index];
         }
-        filmsReturn = tmp;
+        films = tmp;
 
 
     }
