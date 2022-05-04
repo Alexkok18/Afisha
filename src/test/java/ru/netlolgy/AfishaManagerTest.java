@@ -88,8 +88,8 @@ class AfishaManagerTest {
     @Test
     void shouldFindLast12() {
         AfishaManager manager = new AfishaManager(12);
-        FilmData[] testFindAll = {first, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth};
-        FilmData[] testExpectedFindLast12 = {tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, first};
+        FilmData[] testFindAll = {first, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth,eleventh};
+        FilmData[] testExpectedFindLast12 = {eleventh, tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, first};
         manager.setFilms(testFindAll);
         manager.getLast();
         FilmData[] actual = manager.getFilms();

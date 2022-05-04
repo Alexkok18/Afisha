@@ -1,12 +1,10 @@
 package ru.netlolgy;
 
-import lombok.Data;
-
 
 public class AfishaManager {
     private int amountFilms = 10;
     private FilmData[] films = new FilmData[0];
-    
+
     public FilmData[] getFilms() {
         return films;
     }
@@ -14,7 +12,6 @@ public class AfishaManager {
     public void setFilms(FilmData[] films) {
         this.films = films;
     }
-
 
 
     public AfishaManager() {
@@ -42,11 +39,14 @@ public class AfishaManager {
     }
 
     public void getLast() {
+        int  resultLength;
         if (amountFilms > films.length) {
-            amountFilms = films.length;
+            resultLength = films.length;
+        } else {
+            resultLength = amountFilms;
         }
 
-        FilmData[] tmp = new FilmData[amountFilms];
+        FilmData[] tmp = new FilmData[resultLength];
         for (int i = 0; i < tmp.length; i++) {
             int index = films.length - i - 1;
             tmp[i] = films[index];

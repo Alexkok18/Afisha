@@ -1,7 +1,7 @@
 package ru.netlolgy;
 
 
-public class FilmData {
+public class FilmData{
     private String nameFilm;
     private int id;
     private String genre;
